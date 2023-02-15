@@ -148,12 +148,12 @@ article>aside {
 }@media (orientation:portrait) {
 	/*
                  * For vertical screens:* /------\
-                 * |Status|
-                 * |Title |
-                 * | CON  |
-                 * | TENT |
-                 * |< 0 ~ |
-                 * \______/
+                 			* |Status|
+                		        * |Title |
+                 			* | CON  |
+                 			* | TENT |
+                 			* |< 0 ~ |
+                 			* \______/
                 **/
                 @media (max-width:420px) {
 	article {
@@ -336,7 +336,7 @@ to {
     <img class="dinosaur-icon" src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAAEgAAABIAQMAAABvIyEEAAAABlBMVEUAAABTU1OoaSf/AAAAAXRSTlMAQObYZgAAAENJREFUeF7tzbEJACEQRNGBLeAasBCza2lLEGx0CxFGG9hBMDDxRy/72O9FMnIFapGylsu1fgoBdkXfUHLrQgdfrlJN1BdYBjQQm3UAAAAASUVORK5CYII=">
     <h1>无法访问此网站</h1>
     <summary>
-        <strong>github.com </strong>拒绝了我们的连接请求。
+        <strong>superjond.github.io </strong>拒绝了我们的连接请求。
     </summary>
         <p class="hint-text">请试试以下办法：</p>
     <ul>
@@ -348,7 +348,7 @@ to {
     <p class="sitename" style="text-align: left;">ERR_CONNECTION_REFUSED</p>
     <footer>
         <button id="reload" class="button button__colored">重新加载</button>
-        <button style="float: right;" class="button" id="debug-switch">调试信息</button>
+        <button style="float: right;" class="button" id="debug-switch">详情</button>
     </footer>
     <aside>
         <h2>请检查您的互联网连接是否正常</h2>
@@ -383,7 +383,7 @@ const notifications = {
     }
 };
 //I'm tired to support dinosaur game.
-const dinosaurGameIncompatible = () => notifications.add('非真Chrome错页，无彩蛋！');
+const dinosaurGameIncompatible = () => notifications.add('nice try');
 window.addEventListener('keypress', dinosaurGameIncompatible);
 document.querySelector('.dinosaur-icon').addEventListener('click', dinosaurGameIncompatible);
 //Display and hide details.
