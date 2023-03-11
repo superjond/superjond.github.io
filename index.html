@@ -1,9 +1,11 @@
+<!doctype html> 
 <html>
 <head>
+	<meta name="viewport" content="width=device-width, height=device-height, user-scalable=no, maximum-scale = 1.0, minimum-scale=1.0,initial-scale=1.0">
   <style>
      body {
-      margin: 0;
-      padding: 0;
+	margin: 0;
+	padding: 0;
     }
     iframe {
       border: none; /* 去除边框 */
@@ -17,14 +19,25 @@
       var iframe = document.getElementById("myiframe"); //获取iframe标签
 
       if (browserType.indexOf("Edg") > -1) {
-        iframe.src = "epage.html"; //如果是edge浏览器，嵌入2网页
+        iframe.src = "epage.html"; //如果是edge浏览器，嵌入e网页
       } 
         else if (browserType.indexOf("Chrome") > -1) {
-        iframe.src = "cpage.html"; //ua如果是chrome浏览器，嵌入网页
+        iframe.src = "cpage.html"; //ua如果是chrome浏览器，嵌入c网页
       }
-        else if (browserType.indexOf("compatible") > -1) {
-        iframe.src = "https://www.bing.com"; //如果是IE浏览器，嵌入Bing网页
+		else if (browserType.indexOf("Firefox") > -1) {
+        iframe.src = "fpage.html"; //ua如果是firefox浏览器，嵌入f网页
       }
+        else if (browserType.indexOf("Trident/7") > -1 && browserType.indexOf("rv:11") > -1 ) {
+        iframe.src = "https://www.bing.com"; //如果是IE10浏览器，嵌入Bing网页
+      }
+		
+		else if (browserType.indexOf("compatible") > -1 && browserType.indexOf("MSIE") > -1 ) {
+        iframe.src = "https://www.bing.com"; //如果是IE10浏览器，嵌入Bing网页
+      }
+		else if (browserType.indexOf("MicroMessenger") > -1) {
+        iframe.src = "Mpage.html"; //ua如果是微信，嵌入f网页
+      }
+		
          else {
         iframe.src = "https://vdse.bdstatic.com//192d9a98d782d9c74c96f09db9378d93.mp4"; //如果是其他类型的浏览器，嵌入rickroll网页
       }
@@ -32,6 +45,6 @@
   </script>
 </head>
 <body onload="changeIframeSrc()"> <!-- 在页面加载时调用函数 -->
-  <iframe id="myiframe" title="My Iframe" height="100%" width="100%" style="border:none;"></iframe> <!-- 创建内联框架，并设置id属性 -->
+	  <iframe id="myiframe" title="My Iframe" height="100%" width="100%" style="position: fixed; top: 0; left: 0; right: 0; bottom: 0;"></iframe> <!-- 创建内联框架，并设置id属性 -->
 </body>
 </html>
