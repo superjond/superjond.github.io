@@ -2,7 +2,7 @@
 <html>
 <head>
 <meta charset="utf-8">
-<title>superjond.github.io</title>
+<title id="title"></title>
 <meta name="viewport" content="width=device-width, height=device-height, user-scalable=no, maximum-scale = 1.0, minimum-scale=1.0,initial-scale=1.0">
 <script src="js/jquery.min.js"></script>
 <style>
@@ -366,13 +366,14 @@ article>aside>h2 {
 	}
 }
 	</style>
+
 </head>
 <body>
 <article id="frame">
     <img class="dinosaur-icon" alt="">
     <h1>无法访问此网站</h1>
     <summary>
-        <strong>superjond.github.io </strong>拒绝了我们的连接请求。
+        <strong id="ip"></strong>拒绝了我们的连接请求。
     </summary>
         <p class="hint-text">请试试以下办法：</p>
     <ul>
@@ -436,6 +437,8 @@ document.querySelector('#debug-switch').addEventListener('click', () => {
 });
 //Reload the page.
 document.querySelector('#reload').addEventListener('click', () => location.reload());
+	document.getElementById("ip").innerText = window.location.hostname + " ";
+	document.getElementById("title").innerText = window.location.hostname;
 </script>
 
 </body>
